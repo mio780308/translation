@@ -2,6 +2,11 @@ memory corruption : 尋找與修復難以捉模的程式死當
 ^記憶體損壞?
 
 There is no end to the creative ways code can fail,
-這世界上有無數種充滿創意的方式程式碼能以之產生錯誤
+這世界上有無數種充滿創意的方式程式碼能以之產生錯誤，
 but issues with random memory overwrites are almost invariably related to dynamic memory allocation.
-但是
+但是隨機記憶體複寫的問題卻幾乎無可避免地跟動態記憶體配置有關。
+Some system allocates a bit of memory, uses it for a while, 
+then returns the memory to the allocator and then, fatally, 
+continues to use it. Meanwhile, 
+the memory allocator has recycled the memory block and given it to some other system for use. 
+Memory is a shared resource, so the memory could be given to another subsystem, another thread, or on a console even to the GPU. 
