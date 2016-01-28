@@ -1,0 +1,7 @@
+memory corruption : 尋找與修復難以捉模的程式死當
+^記憶體損壞?
+
+There is no end to the creative ways code can fail,
+這世界上有無數種充滿創意的方式程式碼能以之產生錯誤
+but issues with random memory overwrites are almost invariably related to dynamic memory allocation.
+但是
